@@ -1,0 +1,15 @@
+.form-container{
+    min-height: 200px;
+    margin: 20px;
+}
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-content > * {
+    margin: 10px;
+  }
+  

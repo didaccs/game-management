@@ -1,0 +1,48 @@
+.wrapper {
+    width: 100%;  
+    border-bottom: 1px solid var(--border-color);  
+    padding: 1rem;  
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    h1 {
+        font-size: 2.125rem;
+        color: var(--dark-blue);
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -0.1rem;
+        margin: 0.5rem;        
+      }
+
+    .links-group {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        margin: 0.5rem;
+        gap: 2rem;
+        a {            
+            display: flex;
+            background: color-mix(in srgb, var(--bright-blue) 10%, transparent);
+            color: var(--dark-blue);
+            padding-inline: 0.7rem;
+            padding-block: 0.25rem;
+            border-radius: 2.7rem;
+            font-size: 0.875rem;
+            text-decoration: none;              
+            &.active {
+                font-weight: 900;
+                background: color-mix(in srgb, var(--bright-blue) 15%, transparent);
+            }
+        }
+    }
+  
+    .logo {
+      height: 3rem;
+      margin: 0.5rem 0.5rem 0 0.5rem;
+    }
+  }

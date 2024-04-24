@@ -1,0 +1,15 @@
+<mat-card>
+    <h2 class="title">{{ game.name  | truncateName : 20  }}</h2>
+    <div class="row">
+        <span class="price-label">Location:</span>
+        <span class="price">{{ game.location  | truncateName : 20 }}</span>
+    </div>
+    <div class="row">
+        <span class="price-label">Date:</span>
+        <span class="price">{{ game.date | date }}</span>
+    </div>
+    <div class="row">
+        <button mat-raised-button (click)="openGameEdit()">Edit</button>
+        <button mat-raised-button>Delete</button>
+    </div>    
+</mat-card>

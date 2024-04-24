@@ -1,0 +1,15 @@
+<div class="form-container">
+    <h1 mat-dialog-title>{{originalGame.name}}</h1>
+    <div mat-dialog-content class="form-content">
+        <mat-form-field>
+            <input matInput [(ngModel)]="game.name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="game.location">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button [mat-dialog-close]="game" cdkFocusInitial>Update</button>
+    </div>
+</div>
