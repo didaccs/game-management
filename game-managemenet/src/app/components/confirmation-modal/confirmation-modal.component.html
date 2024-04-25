@@ -1,0 +1,11 @@
+<div class="form-container">
+    <h1 mat-dialog-title>Are you sure you want to delete {{itemName}} ?</h1>    
+    <div mat-dialog-actions class="actions">
+        <button mat-button (click)="onCancelClick()">
+            <mat-icon fontIcon="cancel"></mat-icon>
+        </button>
+        <button mat-button (click)="onAcceptClick()" cdkFocusInitial>
+            <mat-icon fontIcon="done"></mat-icon>
+        </button>
+    </div>
+</div>

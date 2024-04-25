@@ -6,10 +6,14 @@
     </div>
     <div class="row">
         <span class="price-label">Date:</span>
-        <span class="price">{{ game.date | date }}</span>
+        <span class="price">{{ game.date | date:'medium' }}</span>
     </div>
-    <div class="row">
-        <button mat-raised-button (click)="openGameEdit()">Edit</button>
-        <button mat-raised-button>Delete</button>
+    <div class="row actions">
+        <button mat-raised-button (click)="onGameDelete()">
+            <mat-icon fontIcon="delete"></mat-icon>
+        </button>
+        <button mat-raised-button (click)="openGameEdit()">
+            <mat-icon fontIcon="edit"></mat-icon>            
+        </button>
     </div>    
 </mat-card>

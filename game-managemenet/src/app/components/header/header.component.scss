@@ -1,6 +1,7 @@
+
+
 .wrapper {
     width: 100%;  
-    border-bottom: 1px solid var(--border-color);  
     padding: 1rem;  
     box-sizing: border-box;
     display: flex;
@@ -9,10 +10,15 @@
     top: 0;
     left: 0;
     z-index: 2;
+    background: linear-gradient(to right, var(--main-color-900), var(--main-color-600));
+    
+    .mat-toolbar{
+        background: linear-gradient(to right, var(--main-color-900), var(--main-color-600));
+    }
 
     h1 {
         font-size: 2.125rem;
-        color: var(--dark-blue);
+        color: var(--neutral-color-400);
         font-weight: 500;
         line-height: 100%;
         letter-spacing: -0.1rem;
@@ -21,22 +27,21 @@
 
     .links-group {
         display: flex;
-        align-items: start;
         flex-wrap: wrap;
         margin: 0.5rem;
         gap: 2rem;
+        margin-left: auto;
         a {            
             display: flex;
-            background: color-mix(in srgb, var(--bright-blue) 10%, transparent);
-            color: var(--dark-blue);
+            background: color-mix(in srgb, var(--main-color-200) 10%, transparent);
+            color: var(--neutral-color-400);
             padding-inline: 0.7rem;
             padding-block: 0.25rem;
             border-radius: 2.7rem;
             font-size: 0.875rem;
             text-decoration: none;              
             &.active {
-                font-weight: 900;
-                background: color-mix(in srgb, var(--bright-blue) 15%, transparent);
+                background: color-mix(in srgb, var(--main-color-200) 30%, transparent);
             }
         }
     }

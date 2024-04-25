@@ -7,9 +7,19 @@
         <mat-form-field>
             <input matInput [(ngModel)]="game.location">
         </mat-form-field>
+        <mat-form-field>
+            <input matInput  [(ngModel)]="game.date" [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-slide-toggle [(ngModel)]="game.status">Game Status</mat-slide-toggle>            
     </div>
-    <div mat-dialog-actions>
-        <button mat-button (click)="onNoClick()">Cancel</button>
-        <button mat-button [mat-dialog-close]="game" cdkFocusInitial>Update</button>
+    <div mat-dialog-actions class="actions">
+        <button mat-button (click)="onCancelClick()">
+            <mat-icon fontIcon="cancel"></mat-icon>
+        </button>
+        <button mat-button (click)="onAcceptClick()" cdkFocusInitial>
+            <mat-icon fontIcon="done"></mat-icon>
+        </button>
     </div>
 </div>

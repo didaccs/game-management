@@ -1,9 +1,19 @@
 <div class="wrapper column gap-1">
-    <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-list cols="4" rowHeight="2:1">
         @for (game of games; track game.id) {            
             <mat-grid-tile>
-                <app-game-item [game]="game"/>
+                <app-game-item 
+                    [game]="game"
+                    (deleteGameEvent)="deleteGame($event)"
+                    (editGameEvent)="updateGame($event)"
+                />
             </mat-grid-tile>
         }
     </mat-grid-list>    
+    <mat-paginator [length]="length"
+                [pageSize]="pageSize" 
+                [pageSizeOptions]="pageSizeOptions"
+                (page)="onPageChange($event)"
+                >
+    </mat-paginator>
 </div>

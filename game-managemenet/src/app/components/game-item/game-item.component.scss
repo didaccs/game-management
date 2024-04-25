@@ -5,9 +5,23 @@ mat-card{
 }
 
 h2 {
-    color: var(--dark-blue);
+    color: var(--main-color-900);
 }
 
 button{
     margin: 0.5rem;
+    padding-right: 2px;
+}
+
+.actions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+mat-card{
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color:  color-mix(in srgb, var(--main-color-400) 60%, transparent);
+    }
 }

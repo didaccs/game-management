@@ -12,19 +12,22 @@ export class GameApiService {
 
   baseUrl: string = "https://6627e59fb625bf088c0a3143.mockapi.io";
 
-  getGames = (url: string, page: number, limit: number): Observable<Game[]> => {
-    return this.httpClient.get<Game[]>(this.baseUrl + url, { params: {page, limit}});
+  getGames = (page?: number, limit?: number): Observable<Game[]> => {    
+    return this.httpClient.get<Game[]>(this.baseUrl + '/api/v1/games', 
+              page == undefined || limit == undefined 
+                ? undefined 
+                : { params: {page, limit}});
   };
 
-  addGame = (url: string, body: any): Observable<Game> => {
-    return this.httpClient.post<Game>(this.baseUrl + url, body);
+  addGame = (game:Game): Observable<Game> => {
+    return this.httpClient.post<Game>(this.baseUrl + '/api/v1/games/', game);
   };
 
-  editGame = (url: string, body: any): Observable<Game> => {
-    return this.httpClient.put<Game>(this.baseUrl + url, body);
+  editGame = (game:Game): Observable<Game> => {
+    return this.httpClient.put<Game>(this.baseUrl + '/api/v1/games/' + game.id, game);
   };
 
-  deleteGame = (url: string): Observable<Game> => {
-    return this.httpClient.delete<Game>(this.baseUrl + url);
+  deleteGame = (game:Game): Observable<Game> => {
+    return this.httpClient.delete<Game>(this.baseUrl + '/api/v1/games/' + game.id);
   };
 }

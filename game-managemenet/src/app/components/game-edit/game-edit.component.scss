@@ -1,15 +1,22 @@
-.form-container{
+.form-container {
     min-height: 200px;
     margin: 20px;
 }
 
-.form-content{
+.form-content {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
-
-.form-content > * {
+.form-content>* {
     margin: 10px;
-  }
-  
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    button{
+        margin: 5px;
+    }
+}
