@@ -8,7 +8,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, GameListComponent, MatDatepickerModule, MatNativeDateModule],
+  imports: [RouterOutlet, HeaderComponent, GameListComponent, 
+            MatDatepickerModule, MatNativeDateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

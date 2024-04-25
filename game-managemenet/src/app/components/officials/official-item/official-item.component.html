@@ -1,0 +1,22 @@
+<mat-card>
+    <h2 class="title">{{ official.name | truncateName : 20 }}</h2>
+    <div class="row">
+        <img class="avatar" src={{official.avatar}} />
+    </div>
+    <div class="row">
+        <span class="price-label">Fee:</span>
+        <span class="price">{{ official.fee | currency : '$' }}</span>
+    </div>
+    <div class="row">
+        <span class="price-label">Birthdate:</span>
+        <span class="price">{{ official.birtDate | date:'medium' }}</span>
+    </div>
+    <div class="row actions">
+        <button mat-raised-button (click)="onOfficialDelete()">
+            <mat-icon fontIcon="delete"></mat-icon>
+        </button>
+        <button mat-raised-button (click)="openOfficialEdit()">
+            <mat-icon fontIcon="edit"></mat-icon>
+        </button>
+    </div>
+</mat-card>

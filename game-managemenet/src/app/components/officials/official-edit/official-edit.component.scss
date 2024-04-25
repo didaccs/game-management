@@ -1,0 +1,30 @@
+.form-container {
+    min-height: 200px;
+    margin: 20px;
+    .avatar{
+        height: 100px;
+        width: 100px;
+        padding: .25rem;
+        background-color:var(--main-color-600);
+        border-radius: 50%;
+        display: flex;        
+    }
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;    
+}
+
+.form-content>* {
+    margin: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    button{
+        margin: 5px;
+    }
+}

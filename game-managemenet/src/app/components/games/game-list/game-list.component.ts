@@ -18,8 +18,6 @@ export class GameListComponent {
   pageSize: number = 25;
   pageSizeOptions: number[] = [10, 25, 50, 100];
   
-  
-
   games: Game[] = [];
 
   ngOnInit(): void {

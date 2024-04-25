@@ -8,5 +8,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideLocaleConfig } from './locale.config';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient(), provideAnimationsAsync(), provideLocaleConfig()]
+  providers: [provideRouter(routes), 
+              provideHttpClient(), 
+              provideAnimationsAsync(), 
+              provideLocaleConfig()]
 };

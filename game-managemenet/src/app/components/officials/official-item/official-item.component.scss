@@ -1,0 +1,46 @@
+mat-card{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 17rem;;
+}
+
+h2 {
+    color: var(--main-color-900);
+}
+
+button{
+    margin: 0.5rem;
+    padding-right: 2px;
+}
+
+.actions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+mat-card{
+    .avatar{
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        padding: .25rem;
+        background-color:var(--main-color-600);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 2%;
+        top: 2%;
+        z-index: 1;
+    
+        &:hover {
+            transition: all .25s;
+            background-color: var(--main-color-900);
+        }
+    }
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color:  color-mix(in srgb, var(--main-color-400) 60%, transparent);
+    }
+}

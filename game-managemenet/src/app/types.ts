@@ -9,6 +9,8 @@ export interface Game {
 
   export interface Official {
     id: number;
+    birtDate: Date;
     name: string;
+    avatar: string;
     fee: number;
   }

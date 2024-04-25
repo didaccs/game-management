@@ -1,11 +1,11 @@
 <div class="wrapper column gap-1">
     <mat-grid-list cols="4" rowHeight="3:2">
-        @for (game of games; track game.id) {            
-            <mat-grid-tile class="list-item">
-                <app-game-item 
-                    [game]="game"
-                    (deleteGameEvent)="deleteGame($event)"
-                    (editGameEvent)="updateGame($event)"
+        @for (official of officials; track official.id) {            
+            <mat-grid-tile>
+                <app-official-item 
+                    [official]="official"
+                    (deleteOfficialEvent)="deleteOfficial($event)"
+                    (editOfficialEvent)="updateOfficial($event)"
                 />
             </mat-grid-tile>
         }

@@ -1,0 +1,28 @@
+<div class="form-container">
+    <h1 mat-dialog-title>{{originalOfficial.name}}</h1>
+    <img class="avatar" src={{official.avatar}} />    
+    <div mat-dialog-content class="form-content">
+        <mat-form-field>
+            <input matInput [(ngModel)]="official.name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="official.avatar">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput  [(ngModel)]="official.birtDate" [matDatepicker]="picker" placeholder="Choose birthdate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="official.fee">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions class="actions">
+        <button mat-button (click)="onCancelClick()">
+            <mat-icon fontIcon="cancel"></mat-icon>
+        </button>
+        <button mat-button (click)="onAcceptClick()" cdkFocusInitial>
+            <mat-icon fontIcon="done"></mat-icon>
+        </button>
+    </div>
+</div>

@@ -3,7 +3,6 @@ import { MatButtonModule } from '@angular/material/button'
 import { TruncateNamePipe } from '../../pipes/truncate-name.pipe';
 import { MatDialogRef, MatDialogClose, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MatIcon } from '@angular/material/icon';
-import { GameItemComponent } from '../games/game-item/game-item.component';
 
 @Component({
   selector: 'app-confirmation-modal',
@@ -14,7 +13,7 @@ import { GameItemComponent } from '../games/game-item/game-item.component';
 })
 export class ConfirmationModalComponent {
   constructor(
-    public dialogRef: MatDialogRef<GameItemComponent>,
+    public dialogRef: MatDialogRef<any>,
     @Inject(MAT_DIALOG_DATA) public itemName: string) { }
       
     onCancelClick(): void {
