@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Game } from '../../types';
+import { Game } from '../../../types';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { GameItemComponent } from '../game-item/game-item.component';
-import { GameApiService } from '../../services/game-api.service';
+import { GameApiService } from '../../../services/game-api.service';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 
 @Component({

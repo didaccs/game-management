@@ -1,10 +1,10 @@
-import { Component, EventEmitter, Inject, Output } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MatDialogClose, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MatFormFieldModule, MatFormField } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button'
-import { Game } from '../../types';
+import { Game } from '../../../types';
 import { GameItemComponent } from '../game-item/game-item.component';
 import { FormsModule } from '@angular/forms';
 import { MatIcon } from '@angular/material/icon';

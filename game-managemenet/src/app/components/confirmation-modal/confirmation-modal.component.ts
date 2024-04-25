@@ -3,7 +3,7 @@ import { MatButtonModule } from '@angular/material/button'
 import { TruncateNamePipe } from '../../pipes/truncate-name.pipe';
 import { MatDialogRef, MatDialogClose, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MatIcon } from '@angular/material/icon';
-import { GameItemComponent } from '../game-item/game-item.component';
+import { GameItemComponent } from '../games/game-item/game-item.component';
 
 @Component({
   selector: 'app-confirmation-modal',
